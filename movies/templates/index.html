@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ pokemon | capfirst }}{% endblock title %}
+{% block content %}
+    <div class="header">Listado de Películas</div>
+    <ul>
+        {% for movie in movies %}
+            <li class="movie">
+                <a href="{{ movie.id }}/">{{ movie.title }} - {{ movie.release_year }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+
+
